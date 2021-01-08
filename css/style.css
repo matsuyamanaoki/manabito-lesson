@@ -1,0 +1,323 @@
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+}
+
+html {
+	font-size: 62.5%;
+}
+
+body, a {
+	font-size: 1.4rem;
+	background-color: #f3f2e9;
+	color: #5f5039;
+	text-decoration: none;
+}
+
+h1, h2, p, figure {
+	margin: 0;
+}
+
+ul, ol {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+header,
+.breadcrumb,
+.eye-catch,
+.contents,
+.page-top,
+footer {
+	margin: 0 auto;
+	width: 840px;
+}
+
+header {
+	margin-bottom: 26px;
+	padding: 28px 0 0;
+}
+
+.logo {
+	margin: 0 0 20px;
+	text-align: center;
+}
+
+.nav-global ul {
+	display: flex;
+}
+
+.nav-global li {
+	width: 25%;
+}
+
+.nav-global a {
+	align-items: center;
+	background-color: #45381b;
+	border-right: solid 1px #dedbc5;
+	color: #dedbc5;
+	display: flex;
+	font-size: 1.5rem;
+	height: 44px;
+	justify-content: center;
+	letter-spacing: 1px;
+}
+
+.nav-global a:hover {
+	background-color: #dedbc5;
+	color: #45381b;
+}
+
+ .breadcrumb {
+	 margin: 0 auto 15px;
+ }
+
+ .breadcrumb ol {
+	 display: flex;
+ }
+
+.breadcrumb li:not(:last-child)::after {
+	content: ">";
+	margin: 0 10px;
+}
+
+.breadcrumb a {
+	text-decoration: underline;
+}
+
+.contents {
+	display: flex;
+	justify-content: space-between;
+	margin: 0 auto 70px;
+}
+
+main {
+	width: 570px;
+}
+
+aside {
+	width: 230px;
+}
+
+h1 {
+	background-image: url(../images/bg_h1_head.png), url(../images/bg_h1_bottom.png);
+	background-position: left top, right bottom;
+	background-repeat: no-repeat, no-repeat;
+	font-size: 2.4rem;
+	margin: 0 0 30px 0;
+	padding: 35px 0 35px 70px;
+}
+
+.side-bnr:not(:last-child) {
+	margin: 0 0 30px;
+}
+
+.side-bnr a {
+	display: block;
+}
+
+.side-bnr a:not(:last-child) {
+	margin-bottom: 5px;
+}
+
+.page-top {
+	display: flex;
+	justify-content: flex-end;
+}
+
+.page-top a {
+	background: url(../images/bg_arrow.png) no-repeat left center;
+	display: inline-block;
+	text-align: right;
+	text-decoration: underline;
+	width: 150px;
+	height: 28px;
+	padding: 5px 0;
+}
+
+footer {
+	border-top: solid 1.5px #d2cdb9;
+	padding: 15px 0;
+	text-align: center;
+}
+
+footer address {
+	font-style: normal;
+	margin-bottom: 5px;
+}
+
+.copyright {
+	font-size: 1.4rem;
+}
+
+.eye-catch {
+	margin: 0 auto 30px;
+}
+
+.l-section p {
+	line-height: 1.5;
+}
+
+.l-section:not(:last-child) {
+	margin-bottom: 30px;
+}
+
+.l-section p:not(:last-child) {
+	margin-bottom: 20px;
+}
+
+.section-title {
+	background: url(../images/bg_h2_head.png) no-repeat left top;
+	border-bottom: solid 1px #d2cdb9;
+	padding: 15px 0 15px 25px;
+	margin-bottom: 30px;
+}
+
+.section-title2 {
+	background: url(../images/bg_h2_head.png) no-repeat left top;
+	border-bottom: solid 1px #d2cdb9;
+	padding: 15px 0 15px 25px;
+	margin-bottom: 15px;
+}
+
+.topics-list li {
+	border-bottom: dotted 1px #d2cdb9;
+	display: flex;
+	justify-content: flex-start;
+	padding: 0 0 25px;
+}
+
+.topics-list li:not(:last-child) {
+	margin: 0 0 25px;
+}
+
+.topics-list time {
+	font-weight: bold;
+	width: 180px;
+}
+
+.image-right {
+	float: right;
+	margin: 0 0 30px 25px;
+}
+
+.image-left {
+	float: left;
+	margin: 0 25px 30px 0;
+}
+
+.clearfix::after {
+	clear: both;
+	content: "";
+	display: block;
+}
+
+.l-plan {
+	border-collapse: collapse;
+	width: 570px;
+}
+
+.l-plan caption {
+text-align: left;
+margin-bottom: 30px;
+line-height: 1.5;
+}
+
+.l-plan caption span {
+	font-weight: bold;
+}
+
+.l-plan thead {
+	background-color: #eee8cc;
+}
+
+.l-plan tbody tr:nth-child(even){
+	background-color: #eee8cc;
+}
+
+.l-plan tbody tr:nth-child(odd){
+	background-color: #fff;
+}
+
+.l-plan th,
+.l-plan td {
+	border: solid 1px #45381b;
+	padding: 17px 0;
+	text-align: center;
+}
+
+.l-plan thead th:first-child,
+.l-plan tbody th {
+	width: 100px;
+}
+
+.l-plan tbody td {
+	line-height: 1.4;
+	padding: 17px 15px;
+	text-align: left;
+}
+
+.gallery-list {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+}
+
+.gallery-list li {
+	margin: 0 0 15px;
+	width: 180px;
+}
+
+.gallery-list li:nth-child(n+4) {
+	margin-bottom: 0;
+}
+
+.gallery-list li figcaption {
+	line-height: 1.5;
+}
+
+.contact-caption {
+	margin: 0 0 20px 35px;
+	list-style: disc;
+}
+
+.contact-caption li:not(:last-child) {
+	padding-bottom: 5px;
+}
+
+.contact-form table tr {
+	display: flex;
+	flex-direction: column;
+	text-align: left;
+	margin-bottom: 10px;
+}
+
+.contact-form table tr:not(:last-child) {
+	margin-bottom: 30px;
+}
+
+.contact-form table th {
+	padding-bottom: 10px;
+}
+
+.contact-form input[type=text] {
+	width: 200px;
+}
+
+.contact-form input[type=email] {
+	width: 300px;
+}
+
+.kind-list {
+	display: flex;
+}
+
+.kind-list li:not(:last-child) {
+	padding-right: 20px;
+}
+.contact-form textarea {
+	height: 100px;
+	width: 400px;
+}
