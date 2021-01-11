@@ -1,37 +1,35 @@
 <!DOCTYPE html>
-<html lang="ja">
+<html <?php language_attributes(); ?>>
 <head>
-<meta charset="UTF-8">
-<title>HOTEL IMPERIAL RESORT TOKYO</title>
-<link rel="stylesheet" href="css/reset.css">
-<link rel="stylesheet" href="css/style.css">
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-<script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
-<script src="js/pagetop.js"></script>
-<script src="js/slide.js"></script>
+<meta charset="<?php bloginfo( 'charset' ); ?>">
 <?php wp_head(); ?>
 </head>
-<body>
+<body <?php body_class(); ?>>
 	<header>
 		<div class="logo">
-			<a href="index.html">
-				<img src="images/logo.png" alt="HOTEL IMPERIAL RESORT TOKYO" width="306" height="49">
+			<a href="<?php echo esc_url( home_url( '/' ) ); ?>">
+				<?php
+				if ( has_custom_logo() ) {
+					$custom_logo_id = get_theme_mod( 'custom_logo' );
+					$image          = wp_get_attachment_image_src( $custom_logo_id, 'full' );
+					$html           = '<img src="' . $image[0] . '"';
+					$html          .= ' width="' . $image[1] . '"';
+					$html          .= ' height="' . $image[2] . '"';
+					$html          .= ' alt="' . esc_attr( get_bloginfo( 'name' ) ) . '">';
+
+					echo $html;
+				}
+				?>
 			</a>
 		</div>
 		<nav class="nav-global">
-			<ul>
-				<li>
-					<a href="concept.html">結婚式のコンセプト</a>
-				</li>
-				<li>
-					<a href="plan.html">プランのご案内</a>
-				</li>
-				<li>
-					<a href="fair.html">ブライダルフェア</a>
-				</li>
-				<li>
-					<a href="contact.html">お問い合わせ</a>
-				</li>
-			</ul>
+			<?php
+			$args = array(
+				'container'      => '',
+				'items_wrap'     => '<ul>%3$s</ul>',
+				'theme_location' => 'global'
+			);
+			wp_nav_menu( $args );
+			?>
 		</nav>
 	</header>

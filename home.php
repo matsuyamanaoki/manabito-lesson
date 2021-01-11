@@ -2,13 +2,13 @@
 	<div id="eye_catch" class="eye-catch">
 		<ul>
 			<li>
-				<img src="images/slide1.jpg" width="840" height="400" alt="こだわりの空間で心地よいひとときを">
+				<img src="<?php echo get_template_directory_uri(); ?>/images/slide1.jpg" width="840" height="400" alt="こだわりの空間で心地よいひとときを">
 			</li>
 			<li>
-				<img src="images/slide2.jpg" width="840" height="400" alt="幸福に満ちた神聖なチャペル">
+				<img src="<?php echo get_template_directory_uri(); ?>/images/slide2.jpg" width="840" height="400" alt="幸福に満ちた神聖なチャペル">
 			</li>
 			<li>
-				<img src="images/slide3.jpg" width="840" height="400" alt="「ありがとう」の気持ちが伝わるウェディング">
+				<img src="<?php echo get_template_directory_uri(); ?>/images/slide3.jpg" width="840" height="400" alt="「ありがとう」の気持ちが伝わるウェディング">
 			</li>
 		</ul>
 	</div>
@@ -36,18 +36,6 @@
 				</ol>
 			</section>
 		</main>
-		<aside>
-			<div class="side-bnr">
-				<a href="plan.html">
-					<img src="images/bnr_plan.jpg" alt="プランのご案内" width="230" height="80">
-				</a>
-				<span>標準のプランをご紹介いたします。</span>
-			</div>
-			<div class="side-bnr">
-				<a href="contact.html">
-					<img src="images/bnr_contact.png" alt="お問い合わせ" width="230" height="60">
-				</a>
-			</div>
-		</aside>
+		<?php get_sidebar(); ?>
 	</div>
 <?php get_footer(); ?>
