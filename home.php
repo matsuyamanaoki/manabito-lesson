@@ -17,22 +17,27 @@
 			<section class="l-section">
 				<h2 class="section-title">お知らせ</h2>
 				<ol class="topics-list">
+					<?php
+					if ( have_posts() ) :
+						while ( have_posts() ) :
+							the_post();
+					?>
 					<li>
-						<time datetime="2014-04-25">2014年04月25日</time>
-						<span class="topics-title">ランチ・ディナーのテイスティングフェア</span>
+						<time datetime="<?php the_time( 'Y-m-d' ); ?>">
+							<?php the_time( get_option( 'date_format' ) ); ?>
+						</time>
+						<span class="topics-title">
+							<a href="<?php the_permalink(); ?>">
+								<?php the_title(); ?>
+							</a>
+						</span>
 					</li>
-					<li>
-						<time datetime="2014-03-03">2014年03月03日</time>
-						<span class="topics-title">春の特別見学会</span>
-					</li>
-					<li>
-						<time datetime="2014-02-20">2014年02月20日</time>
-						<span class="topics-title">期間限定の割引プラン</span>
-					</li>
-					<li>
-						<time datetime="2014-02-14">2014年02月14日</time>
-						<span class="topics-title">バレンタインフェア</span>
-					</li>
+					<?php
+						endwhile;
+					else:
+					?>
+					<li>現在お知らせはありません。</li>
+				<?php endif; ?>
 				</ol>
 			</section>
 		</main>
